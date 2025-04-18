@@ -5,16 +5,18 @@
   }
 
   /* Mobile nav toggle */
+  /* mobile nav toggle (same) */
   .mobile-menu {
     position: fixed;
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
-    z-index: 2000;
+    width: 100%;
+    z-index:2000;
   }
   .toggle-btn {
     background: #fff;
+    margin-left: 12px;
     border: none;
     width: 40px;
     height: 40px;
