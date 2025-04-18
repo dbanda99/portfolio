@@ -58,7 +58,7 @@ html, body {
   /* ---------- Breathing Text Animation ---------- */
   @keyframes breathe {
     0%, 100% { color: rgba(255,255,255,0.8); }
-    50%      { color: #ffffff; }
+    50%      { color: #ff7f50; }
   }
   .breath1 { animation: breathe 8s ease-in-out infinite; }
   .breath2 { animation: breathe 8s ease-in-out infinite; animation-delay: 1.5s; }
