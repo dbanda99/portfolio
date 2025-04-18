@@ -41,7 +41,7 @@
       transition: transform 0.3s ease-in-out;
       width: 80%;
       max-width: 300px;
-      background: rgba(0,0,0,0.6);
+      background: rgb(0, 0, 0);
       border-radius: 8px;
       overflow: hidden;
       list-style: none;

@@ -38,13 +38,13 @@
       transition: transform 0.3s ease-in-out;
       width: 80%;
       max-width: 300px;
-      background: rgba(0,0,0,0.6);
+      background: rgb(0, 0, 0);
       border-radius: 8px;
       overflow: hidden;
       list-style: none;
       padding: 0;
       margin: 0;
-      z-index:1900;
+      z-index: 1900;
     }
     .mobile-menu.open #mobileNavLinks {
       transform: translateX(-50%) scaleY(1);
