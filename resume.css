@@ -121,10 +121,13 @@ html, body {
   /* Footer */
   .footer {
     position: absolute;
-    bottom: 0; left: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     padding: 0.5rem 0;
+    background: rgba(0,0,0,0.4);
     font-size: 0.9rem;
     color: rgba(255,255,255,0.8);
+    text-align: center;
   }
   

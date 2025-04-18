@@ -1,0 +1,187 @@
+/* ---------- Global & Background ---------- */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    background: url('images/desert-night-sky.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  /* ---------- Desktop Navbar & Brand ---------- */
+  .navbar { z-index: 1000; }
+  .brand {
+    position: absolute;
+    top: 0; left: 1rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo { width: 30px; }
+  .nav-brand-text {
+    color: #fff; font-size: 1.2rem; margin-left: 0.5rem;
+  }
+  .navbar-nav .nav-link {
+    color: #fff; margin: 0 1rem; font-size: 1.1rem; position: relative;
+  }
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
+    color: #ff7f50;
+  }
+  .navbar-nav .nav-link.active::after,
+  .navbar-nav .nav-link:hover::after {
+    content: "";
+    position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 2px; background: #ff7f50;
+  }
+  
+  /* ---------- Page Title ---------- */
+  .projects-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 4rem;
+  }
+  
+  /* ---------- Projects Container ---------- */
+  .projects-container {
+    height: calc(100vh - 200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* ---------- Carousel Wrapper ---------- */
+  .carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    height: 100%;
+  }
+  
+  /* ---------- Carousel Viewport ---------- */
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* ---------- Base Card Styling (increased height) ---------- */
+  .carousel-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 520px;               /* was 480px */
+    height: 700px;              /* new fixed height */
+    padding: 1rem;
+    background: rgba(0,0,0,0.6);
+    border-radius: 8px;
+    color: #fff;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s, width 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  
+  /* ---------- Left & Right Cards (wider gap) ---------- */
+  .carousel-card.prev {
+    transform: translate(-200%, -50%) scale(0.8);  /* moved further left */
+    width: 400px;                                   /* was 360px */
+    opacity: 0.5;
+  }
+  .carousel-card.next {
+    transform: translate(100%, -50%) scale(0.8);   /* moved further right */
+    width: 400px;
+    opacity: 0.5;
+  }
+  
+  /* ---------- Hidden Cards ---------- */
+  .carousel-card.hidden {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    width: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+  
+  /* ---------- Card Image ---------- */
+  .card-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* ensure full image is shown */
+    background: #222;
+  }
+  
+  /* ---------- Card Content ---------- */
+  .card-content {
+    flex: 1;
+    width: 100%;
+  }
+  .card-content p {
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.9);
+  }
+  .card-content strong {
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  /* ---------- Visit Button ---------- */
+  .visit-btn {
+    margin-top: 1rem;
+    background: #ff7f50;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  /* ---------- Navigation Arrows (further out) ---------- */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .carousel-btn.prev { left: -100px; }   /* further out */
+  .carousel-btn.next { right: -100px; }
+  .carousel-btn:hover {
+    background: rgba(255,127,80,0.8);
+  }
+  
+  /* ---------- Footer ---------- */
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    background: rgba(0,0,0,0.4);
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+  }
+  

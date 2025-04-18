@@ -1,92 +1,125 @@
 @media (max-width: 767px) {
-    /* Hide desktop nav */
-    .navbar { display: none !important; }
-  
-    /* Mobile toggle (same as other pages) */
-    .mobile-menu {
-      position: fixed;
-      top: 1rem; left: 50%;
-      transform: translateX(-50%);
-      width: 40px; z-index: 2000;
-    }
-    .toggle-btn {
-      background: #fff; border: none;
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .toggle-btn .bi {
-      font-size: 1.5rem; color: #000;
-      transition: transform 0.3s;
-    }
-    #mobileNavLinks {
-      position: fixed;
-      top: calc(1rem + 40px + 0.5rem);
-      left: 50%;
-      transform: translateX(-50%) scaleY(0);
-      transform-origin: top center;
-      transition: transform 0.3s ease-in-out;
-      width: 80%; max-width: 300px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 8px;
-      overflow: hidden;
-      list-style: none; padding: 0; margin: 0; z-index: 1900;
-    }
-    .mobile-menu.open #mobileNavLinks {
-      transform: translateX(-50%) scaleY(1);
-    }
-    /* Brand in dropdown */
-    .nav-brand-mobile {
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      display: flex; align-items: center;
-    }
-    .nav-logo-mobile { width: 30px; }
-    .nav-brand-text-mobile {
-      color: #fff; font-size: 1.1rem; margin-left: 0.5rem;
-    }
-    #mobileNavLinks .nav-link {
-      display: block;
-      color: #fff;
-      font-size: 1.1rem;
-      padding: 0.75rem 1rem;
-      text-align: center;
-      position: relative;
-    }
-    #mobileNavLinks .nav-link.active,
-    #mobileNavLinks .nav-link:hover {
-      color: #ff7f50;
-    }
-    #mobileNavLinks .nav-link.active::after,
-    #mobileNavLinks .nav-link:hover::after {
-      content: "";
-      position: absolute;
-      bottom: 0; left: 25%; right: 25%;
-      height: 2px; background-color: #ff7f50;
-    }
-  
-    /* Vertical layout for panels */
-    .resume-container {
-      flex-direction: column;
-      padding: 6rem 1rem 2rem;
-      gap: 1.5rem;
-    }
-    .panel {
-      padding: 1.5rem;
-    }
-    input, textarea {
-      padding: 0.5rem;
-    }
-    .submit-btn {
-      padding: 0.5rem 1.5rem;
-    }
-    .offer-item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-    .offer-item .btn {
-      margin-top: 0.5rem;
-    }
+  /* Hide desktop navbar */
+  .navbar {
+    display: none !important;
   }
-  
+
+  /* Mobile nav toggle */
+  .mobile-menu {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    z-index: 2000;
+  }
+  .toggle-btn {
+    background: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toggle-btn .bi {
+    font-size: 1.5rem;
+    color: #000;
+    transition: transform 0.3s;
+  }
+  #mobileNavLinks {
+    position: fixed;
+    top: calc(1rem + 40px + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top center;
+    transition: transform 0.3s ease-in-out;
+    width: 80%;
+    max-width: 300px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 8px;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1900;
+  }
+  .mobile-menu.open #mobileNavLinks {
+    transform: translateX(-50%) scaleY(1);
+  }
+  .nav-brand-mobile {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo-mobile {
+    width: 30px;
+  }
+  .nav-brand-text-mobile {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+  }
+  #mobileNavLinks .nav-link {
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    position: relative;
+  }
+  #mobileNavLinks .nav-link.active,
+  #mobileNavLinks .nav-link:hover {
+    color: #ff7f50;
+  }
+  #mobileNavLinks .nav-link.active::after,
+  #mobileNavLinks .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 25%; right: 25%;
+    height: 2px; background-color: #ff7f50;
+  }
+
+  /* Stack panels vertically */
+  .resume-container {
+    flex-direction: column;
+    padding: 6rem 1rem 5rem; /* extra bottom padding for footer */
+    gap: 1.5rem;
+  }
+  .panel {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  /* Inputs & buttons shrink */
+  input, textarea {
+    padding: 0.5rem;
+  }
+  .submit-btn {
+    padding: 0.5rem 1.5rem;
+  }
+  .offer-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .offer-item .btn {
+    margin-top: 0.5rem;
+  }
+
+  /* Pin footer at bottom */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    background: rgba(0,0,0,0.4);
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    z-index: 1000;
+  }
+}

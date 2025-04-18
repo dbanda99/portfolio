@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — David Antonio Banda</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="projects.css" />
+  <link rel="stylesheet" href="projects-mobi.css" />
+</head>
+<body>
+  <!-- MOBILE NAV TOGGLE -->
+  <div class="mobile-menu d-block d-md-none">
+    <button id="mobileToggle" class="toggle-btn">
+      <i id="mobileIcon" class="bi bi-chevron-down"></i>
+    </button>
+    <ul id="mobileNavLinks">
+      <li class="nav-brand-mobile d-flex align-items-center mb-2">
+        <img src="images/d-logo.png" alt="Logo" class="nav-logo-mobile me-2" />
+        <span class="nav-brand-text-mobile">David Banda Portfolio</span>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+      <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+      <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+    </ul>
+  </div>
+
+  <!-- DESKTOP NAV + BRAND -->
+  <nav
+    class="navbar navbar-expand-lg navbar-dark
+           position-absolute top-0 start-0 w-100 d-none d-md-flex"
+  >
+    <div class="brand d-flex align-items-center ps-3">
+      <img src="images/d-logo.png" alt="Logo" class="nav-logo" />
+      <span class="nav-brand-text">David Banda Portfolio</span>
+    </div>
+    <div class="container-fluid justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE TITLE -->
+  <h1 class="projects-title text-center text-white mt-5 mb-4">Projects</h1>
+
+  <!-- PROJECTS CAROUSEL -->
+  <div class="projects-container">
+    <div class="carousel-container" id="carouselContainer">
+      <button id="prevBtn" class="carousel-btn prev">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <div class="carousel">
+        <!-- Project Card 1 -->
+        <div class="carousel-card">
+          <div class="card-image">
+            <img src="images/chip-it-img.png" alt="Project One" />
+          </div>
+          <div class="card-content">
+            <p><strong>Project Name:</strong> Chip-IT</p>
+            <p><strong>Overview:</strong> Chip-IT was founded to sell my IT services around my city. I developed this Website
+            to help me display my services. Also, using Javascript I automated the form answers to be sent to me via email. This way
+            I can know when I have a new task.</p>
+          </div>
+          <a href="https://dbanda99.github.io/chip-it/" class="btn visit-btn">Visit</a>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="carousel-card">
+          <div class="card-image">
+            <img src="images/open-up-img.png" alt="Project Two" />
+          </div>
+          <div class="card-content">
+            <p><strong>Project Name:</strong> Open-Up</p>
+            <p><strong>Overview:</strong> During a study at Cumorah Academy in the Czech Republic, I developed a website for
+            annoymous compliments between the students. This would help to express our compliments to those around us, Open-Up
+            would simply keep you name annoymous, so even someone who is shy could express their feelings.</p>
+          </div>
+          <a href="https://dbanda99.github.io/Open-Up/arrival-page.html" class="btn visit-btn">Visit</a>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="carousel-card">
+          <div class="card-image">
+            <img src="images/wedding-website-img.png" alt="Project Three" />
+          </div>
+          <div class="card-content">
+            <p><strong>Project Name:</strong> My Wedding Website</p>
+            <p><strong>Overview:</strong> Since I am getting married in Octuber 2025, I wanted to create a website for my guests.
+            This website would be use to display a beautiful image of me and my fiance, and also a count down timer for the wedding.
+            This website is simpled design, and there's no big fancy lines of code in the Javascript.</p>
+          </div>
+          <a href="https://dbanda99.github.io/Wedding-Website/index.html" class="btn visit-btn">Visit</a>
+        </div>
+        <!-- add more .carousel-card as needed -->
+      </div>
+
+      <button id="nextBtn" class="carousel-btn next">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center text-white">
+    © 2025 Copyright | David Banda
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Carousel & mobile toggle logic -->
+  <script src="projects.js"></script>
+</body>
+</html>
