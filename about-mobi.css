@@ -1,0 +1,144 @@
+@media (max-width: 767px) {
+    /* hide desktop nav */
+    .navbar {
+      display: none !important;
+    }
+  
+    /* MOBILE TOGGLE */
+    .mobile-menu {
+      position: fixed;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      z-index: 2000;
+    }
+    .toggle-btn {
+      background: #fff;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .toggle-btn .bi {
+      font-size: 1.5rem;
+      color: #000;
+      transition: transform 0.3s;
+    }
+  
+    /* dropdown panel */
+    #mobileNavLinks {
+      position: fixed;
+      top: calc(1rem + 40px + 0.5rem);
+      left: 50%;
+      transform: translateX(-50%) scaleY(0);
+      transform-origin: top center;
+      transition: transform 0.3s ease-in-out;
+      width: 80%;
+      max-width: 300px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 8px;
+      overflow: hidden;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      z-index: 1900;
+    }
+    .mobile-menu.open #mobileNavLinks {
+      transform: translateX(-50%) scaleY(1);
+    }
+    .nav-brand-mobile {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo-mobile {
+      width: 30px;
+    }
+    .nav-brand-text-mobile {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-left: 0.5rem;
+    }
+    #mobileNavLinks .nav-link {
+      display: block;
+      color: #fff;
+      font-size: 1.1rem;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    #mobileNavLinks .nav-link.active,
+    #mobileNavLinks .nav-link:hover {
+      color: #ff7f50;
+    }
+    #mobileNavLinks .nav-link.active::after,
+    #mobileNavLinks .nav-link:hover::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      right: 25%;
+      height: 2px;
+      background-color: #ff7f50;
+    }
+  
+    /* layout adjustments */
+    .about-intro {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .about-intro .text-block,
+    .about-intro .img-block {
+      max-width: 100%;
+    }
+    .about-intro .img-block img {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+    .info-section {
+      padding: 2rem 1rem;
+    }
+  
+    /* cards on mobile */
+    .cards-row {
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .skill-card {
+      width: 160px;
+      height: auto;
+      padding: 1rem;
+    }
+    .skill-card img {
+      width: 60px;
+      margin-bottom: 0.75rem;
+    }
+    .skill-card h5 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .skill-card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+    .skill-card .mastery-bar {
+      height: 8px;
+    }
+  
+    /* hide custom scrollbar on mobile */
+    #scrollBarTrack {
+      display: none;
+    }
+  
+    /* footer tweaks */
+    .footer {
+      font-size: 0.8rem;
+      padding: 0.3rem 0;
+    }
+  }
+  

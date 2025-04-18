@@ -1,0 +1,88 @@
+/* ---------- Global & Background ---------- */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    background: url('images/desert-night-sky.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  /* ---------- Desktop Navbar ---------- */
+  .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    position: relative;
+  }
+  .navbar-nav .nav-link.active {
+    color: #ff7f50;
+  }
+  .navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff7f50;
+  }
+  
+  /* Hover highlight */
+  .navbar-nav .nav-link:hover {
+    color: #ff7f50;
+  }
+  .navbar-nav .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff7f50;
+  }
+  
+  /* ---------- Main Content Layout ---------- */
+  .content-wrapper {
+    height: 100vh;
+  }
+  h1 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  .custom-text {
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* ---------- Breathing Text Animation ---------- */
+  @keyframes breathe {
+    0%, 100% { color: rgba(255,255,255,0.8); }
+    50%      { color: #ffffff; }
+  }
+  .breath1 { animation: breathe 8s ease-in-out infinite; }
+  .breath2 { animation: breathe 8s ease-in-out infinite; animation-delay: 1.5s; }
+  .breath3 { animation: breathe 8s ease-in-out infinite; animation-delay: 3s; }
+  .breath4 { animation: breathe 8s ease-in-out infinite; animation-delay: 4.5s; }
+  .breath5 { animation: breathe 8s ease-in-out infinite; animation-delay: 6s; }
+  
+  /* ---------- Social Icons ---------- */
+  .social-icons a {
+    padding: 0.3rem;       /* smaller per your tweak */
+    border-radius: 50%;
+  }
+  .social-icons i {
+    font-size: 1.5rem;
+  }
+  
+  /* ---------- Footer ---------- */
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
